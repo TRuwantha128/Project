@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Scope</title>
+        <script>
+
+            //Global Scope and Local Scope 
+
+            let globalScope = "This is global scope . ";
+            function test(){
+                let localScope = "This is local Scope . ";
+                console.log(globalScope);
+                console.log(localScope);
+
+            }
+            test();
+            console.log(globalScope);
+            // console.log(localScope); // this error become because cannot access local scope variable to the outside
+            
+
+            let globalScope2 = "This is global Scope 2 . ";
+            function test2(){
+                globalScope = "Changed";
+                console.log(globalScope); //Here changed the value of global scope variable globalScope2
+            }
+            test2();
+            console.log(globalScope);
+
+            //create variable same name as the global scope varible name
+
+            test3(); // we can call function before function ,no error execution okay
+
+            let globalScope3 = "This is global Scope";
+            function test3(){
+                let globalScope3 = "changed";
+                console.log(globalScope3); //output - changed
+            }
+
+            console.log(globalScope3); //output - This is global Scope
+            
+
+            //Var and let difference
+
+            let globalScope4 = "This is global Scope"
+
+            function test4(){
+                var globalScope ="Changed"; 
+                console.log(globalScope);//Changed
+            }
+            test4();
+            console.log(globalScope); //output Changed
+
+        </script>
+    </head.>
+</html>
