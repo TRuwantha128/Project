@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Function</title>
+        <script>
+
+            //no parameter functions
+
+            function displayName(){
+                let firstName = "Tharindu";
+                let lastName = "Ruwantha";
+                console.log(firstName + " " +lastName );
+            }
+
+            displayName();
+            displayName();
+            displayName();
+
+            //Parameterized functions
+
+            function fullName(firstName,lastName){
+                
+                console.log(firstName+" "+lastName);
+            }
+
+            fullName("Anura","Hemantha");
+            fullName("Shanthi","Malani");
+            fullName("Hashen","Madushanka");
+
+            //Return Function
+
+            function getInfo(fullName , age){
+                let out = fullName+" is "+age+" years old .";
+                return out;
+            }
+            let output = getInfo("Tharindu Ruwantha",24);
+            console.log(output)
+            
+
+        
+
+
+        </script>
+    </head>
+</html>
