@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>JS Objects</title>
+        <script>
+
+            //Object create here 
+
+            let student= {
+                name:"Tharindu",
+                age:24,
+                sayHi:function(){
+                    console.log("Hi");
+                }
+            }
+
+            console.log(student.name);
+            console.log(student.age);
+            student.sayHi();
+
+            student.age = 25;
+            console.log(student.age);
+
+            student.sayHello = function(){
+                console.log("Hello");
+            }
+            student.sayHello();
+            
+            let student2={
+                name : "Ruwantha"
+            }
+            Object.assign(student2,student);
+
+            console.log(student2);
+
+            // console.clear();
+
+            console.error(student);
+            delete student.age;
+
+            console.log(student);
+
+
+            //keys , values , entries
+
+            console.log(Object.keys(student));
+            console.log(Object.entries(student));
+            console.log(Object.values(student));
+
+
+
+
+
+        </script>
+    </head>
+</html>
