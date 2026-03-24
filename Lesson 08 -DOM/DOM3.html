@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>JS DOM</title>
+    </head>
+    <body>
+        <h1 class = "title">JS DOM</h1>
+        <p class = "test">test</p>
+        <p>tharindu ruwantha</p>
+
+        <a id = "myLink" href =  "https://google.com">Google.com</a>
+
+        <style>
+            .textColor{
+                color:BLACK;
+                font-weight: bold;
+
+            }
+        </style>
+
+        <script>
+            //getElementsByClassName
+            let titleElement = document.getElementsByClassName("title");
+            console.log(titleElement);
+
+            //getElementsByClassName
+            let testElement = document.getElementsByClassName("test");
+            console.log(testElement);
+            testElement[0].innerHTML = "changed";
+            
+            //getElementsByTagName
+            let testP = document.getElementsByTagName("p");
+            console.log(testP);
+            testP[1].innerHTML = "Hashen Madusanka";
+
+            //Attribute Change
+            let myLink = document.getElementById("myLink");
+             myLink.href = "https://google.lk";
+            // myLink.style.color = "red";
+            // myLink.style.color = "green";
+            myLink.innerHTML = "google lk"; 
+
+            myLink.classList.add("textColor");
+
+
+
+        </script>
+    </body>
+</html>
