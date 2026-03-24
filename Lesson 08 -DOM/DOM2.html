@@ -6,7 +6,9 @@
     <body>
         <h1 id = "title">JS DOM</h1>
         <p id = "test">Testing </p>
-        <button id = "btn">Click me</button>
+        <button id = "btn" onclick="let btnElement1=document.getElementById('btn'); 
+                                   console.log(btnElement1.innerHTML);
+        ">Click me</button>
 
         <script>
             let titleElement = document.getElementById("title");
@@ -15,7 +17,11 @@
 
             let testElement = document.getElementById("test");
             console.log(testElement.innerHTML);
-            testElement.innerHTML = "Test 2";
+            testElement.innerHTML = "changed";
+
+            let btnElement = document.getElementById("btn");
+            console.log(btnElement.innerHTML);
+            btnElement.innerHTML = "changed";
 
         </script>
 
