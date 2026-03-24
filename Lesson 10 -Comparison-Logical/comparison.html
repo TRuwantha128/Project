@@ -13,8 +13,13 @@
             function compare(){
             let input1 = document.getElementById("input1").value;
             let input2 = document.getElementById("input2").value;
+            // input1 = Number(input1);
+            // input1 = Number(input2);
+
+            input1 = parseInt(input1);
+            input2 = parseFloat(input2);
             
-            console.log("Input : ",input1,input2);
+            console.log("Input : ",typeof input1,typeof input2);
             let output = '';
 
             if(input1 == input2){
@@ -28,6 +33,14 @@
                 output = "input1 < input2";
             }
             document.getElementById("result").innerHTML = output;
+
+            //===
+            if(input1===input2){
+                console.log("input1===input2");
+                output = "input1 === input2";
+                document.getElementById("result").innerHTML=output;
+            }
+            
 
             }
 
