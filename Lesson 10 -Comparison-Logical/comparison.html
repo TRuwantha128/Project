@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Comparison Operator & Logical Operator</title>
+    </head>
+    <body>
+        <p>Input1 : <input type="text" id = "input1" ></p>
+        <p>Input2 : <input type ="text" id = "input2" ></p>
+        <p><button onclick="compare()">Compare</button></p>
+        <div id="result"></div>
+
+        <script>
+
+            function compare(){
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            
+            console.log("Input : ",input1,input2);
+            let output = '';
+
+            if(input1 == input2){
+                   console.log("input1 = input 2");
+                   output = "input1 == input2";
+            }else if(input1>input2){
+                console.log("input1>input2");
+                output = "input1 > input2";
+            }else{
+                console.log("input1<input2");
+                output = "input1 < input2";
+            }
+            document.getElementById("result").innerHTML = output;
+
+            }
+
+        </script>
+
+    </body>
+</html>
