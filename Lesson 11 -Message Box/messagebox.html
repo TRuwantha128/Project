@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Message Box</title>
+    </head>
+    <body>
+        <h1>
+            Message Boxes
+        </h1>
+        <p>
+            <button  id = "alert" onclick = "showAlert()">Allert</button>
+            <button id = "prompt" onclick = "showPrompt()">Prompt</button>
+            <button id = "confirm" onclick = "showConfirm()">Confirm</button>
+        </p>
+
+        <div id="text">type</div>
+
+        <script>
+            function showAlert(){
+                alert("Error ...");
+            }
+            function showPrompt(){
+                let input = prompt("What is your name ? ");
+                console.log(input);
+                console.log(typeof input);
+
+            }
+
+            function showConfirm(){
+                let isOk = confirm("Are you sure ?");
+                console.log(isOk);
+                console.log(typeof isOk);
+
+                if(isOk ==true){
+                    document.getElementById("text").innerHTML = "changed";
+                }else{
+                    document.getElementById("text").innerHTML = "False";
+                }
+
+            }
+
+        </script>
+
+    </body>
+</html>
