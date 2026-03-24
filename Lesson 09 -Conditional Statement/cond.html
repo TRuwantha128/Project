@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>JS Conditions</title>
+    </head>
+    <body>
+        <h2>Conditions</h2>
+        <p>Age : <input type = "text" id="age"><button onclick="checkInput()">Click me</button></p>
+        <p>District : <select id="district">
+                             <option value = "Ja Ela">Ja Ela</option>
+                             <option value = "Wattala">Wattala</option>
+                             <option value = "Colombo">Colombo</option>
+                             <option value = "Kandy">Kandy</option>
+                       </select>
+                       <button onclick="checkDistrict()">Check District</button>
+        </p>
+        <script>
+            function checkInput(){
+                     let age = document.getElementById("age").value;
+                     console.log(age);
+                     
+
+                     //Ternary Operator ...
+                     age = age == '' ? -1:age;
+
+                     if(age>=18){
+                        console.log("Older Than 19");
+                     }else if(age<18 && age>=0){
+                        console.log("Younger ");
+                     }else{
+                        console.log("Default age")
+                     }
+            }
+
+            function checkDistrict(){
+                let districtElement = document.getElementById("district").value;
+                console.log(districtElement);
+                //If ElSE LADDER
+
+                // if(districtElement == 'Ja Ela'){
+                //     console.log("Best City");
+                // }else if(districtElement=='Wattala'){
+                //     console.log("Lover city");
+                // }else if(districtElement == 'Colombo'){
+                //     console.log("In Kandy");
+                // }else {
+                //     console.log("Main City ");
+                // }
+
+                //CASE STATEMENT
+
+                switch(districtElement){
+                    case "Ja Ela":
+                        console.log(districtElement+" is Best City in the world");
+                        break;
+                    case "Wattala":
+                        console.log(districtElement+ " is the Lovely future girl city");
+                        break;
+                    case "Colombo":
+                        console.log(districtElement+ " is the main city of the SriLanka ");
+                        break;
+                    case "Kandy":
+                        console.log(districtElement+ " is the ancient city of the Sri lanka");
+                        break;
+                }
+
+
+            }
+        </script>
+    </body>
+</html>
