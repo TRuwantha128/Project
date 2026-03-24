@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>JS DOM 2 </title>
+        
+    </head>
+    <body>
+        <h1 id = "title">JS DOM</h1>
+        <p id = "test">Testing </p>
+        <button id = "btn">Click me</button>
+
+        <script>
+            let titleElement = document.getElementById("title");
+            console.log(titleElement.innerHTML);
+            titleElement.innerHTML = "Changed";
+
+            let testElement = document.getElementById("test");
+            console.log(testElement.innerHTML);
+            testElement.innerHTML = "Test 2";
+
+        </script>
+
+    </body>
+</html>
